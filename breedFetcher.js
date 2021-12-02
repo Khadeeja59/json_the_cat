@@ -1,6 +1,6 @@
 const request = require('request');
 const breedName = process.argv[2];
-let url = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`
+let url = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
 request(url, (error, response, body) => {
   if (error) {
     console.log('error:', error);
@@ -18,6 +18,6 @@ request(url, (error, response, body) => {
     console.log('The breed queried is not found!');
   }
   console.log(data[0].description);
-})
+});
 
 
